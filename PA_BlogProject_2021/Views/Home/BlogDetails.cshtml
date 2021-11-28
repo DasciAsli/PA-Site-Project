@@ -74,7 +74,7 @@
 
 
                     <!--Comments-->
-                    <div class="col-lg-12 mb-5">
+                    <div class="col-lg-12 mb-5" id="burayaDön">
                         @foreach (var item in Model)
                         {
                             <div class="comment-area card border-0 p-5">
@@ -109,7 +109,7 @@
                             <span id="vazgec" hidden><i class="fas fa-window-close"></i></span>
 
                             <!--Her zaman açık olan yorum doldurma alanı-->
-                            <div class="row">
+                            <div class="row ">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input class="form-control" type="text" name="Guest-Name" id="Guest-Name" placeholder="Name:">
@@ -124,6 +124,7 @@
 
 
                             <textarea class="form-control mb-3" name="comment" id="Guest-Comment" cols="30" rows="5" placeholder="Comment"></textarea>
+                           
                             <input class="btn btn-main btn-round-full" type="submit" name="submit" id="submit_contact" value="Submit Message">
                         </form>
                     </div>
@@ -219,15 +220,15 @@
             var getir = $(this).parent().parent().children('h5').attr('id');
             var al = $(this).parent().parent().children('h5').text();
 
-            $("yorumId").html(getir); //idsi yorumId olana getiri yazdır
-            $("#kime").removeAttr('hidden') //
-            $("#yapılacakKisi").removeAttr('hidden') //
+            $("#yorumId").html(getir); //idsi yorumId olana getiri yazdır
+            $("#kime").removeAttr('hidden'); 
+            $("#yapılacakKisi").removeAttr('hidden');
             $("#yapılacakKisi").html(al);
             $("#vazgec").removeAttr('hidden');
         });
 
         $("#vazgec").click(function () {
-            $("yorumId").html();
+            $("#yorumId").html();
             $("#kime").attr('hidden', 'hidden');
             $("#yapılacakKisi").attr('hidden', 'hidden');
             $("#yapılacakKisi").html();
@@ -245,7 +246,7 @@
             var name = $('#Guest-Name').val();
             var country = $('#Guest-Country').val();
             var comment = $('#Guest-Comment').val();
-            var IsReply = $("yorumId").text();
+            var IsReply = $("#yorumId").text();
 
             $.ajax({
 
