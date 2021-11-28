@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <!-- Head Start -->
+    @Html.Partial("_Head")
+
+</head>
+
+<body>
+
+    <!-- Header Start -->
+    @Html.Partial("_Header")
+
+    <div class="main-wrapper ">
+
+        <!-- Sliders -->
+        @RenderSection("IndexSlider", false)
+        @RenderSection("AboutSlider", false)
+
+        @RenderBody()
+
+        <!-- Footer Start -->
+        @Html.Partial("_Footer")
+
+    </div>
+
+    <!-- Scripts Start -->
+    @Html.Partial("_Scripts")
+    @RenderSection("Scripts", false)
+
+</body>
+</html>

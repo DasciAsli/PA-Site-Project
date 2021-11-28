@@ -1,0 +1,60 @@
+﻿@model List<PA_BlogProject_2021.Models.Portfolios>
+
+
+@{
+    ViewBag.Title = "Portföy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section AboutSlider{
+
+    @Html.Partial("_AboutSlider")
+
+}
+
+
+<!-- Section Portfolio Start -->
+<section class="section portfolio pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+                <div class="section-title">
+                    <span class="h6 text-color">Çalışmalarım</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row portfolio-gallery">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="portflio-item position-relative mb-4">
+                        <a href="@item.ImageURL" class="popup-gallery">
+                            <img src="@item.ImageURL" alt="" class="img-fluid w-100">
+
+                            <i class="ti-plus overlay-item"></i>
+                            <div class="portfolio-item-content">
+                                <h3 class="mb-0 text-white">@item.ProjeName</h3>
+                                <p class="text-white-50">@item.ProjeCategory</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Section Testimonial Start -->
+<section class="section testimonial bg-gray">
+    <div class="container">
+        <div class="row justify-content-center">
+        </div>
+    </div>
+</section>
