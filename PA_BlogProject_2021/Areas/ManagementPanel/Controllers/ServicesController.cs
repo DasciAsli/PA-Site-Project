@@ -10,6 +10,7 @@ using PA_BlogProject_2021.Models;
 
 namespace PA_BlogProject_2021.Areas.ManagementPanel.Controllers
 {
+    [Auth]
     public class ServicesController : Controller
     {
         private BlogProjeContext db = new BlogProjeContext();

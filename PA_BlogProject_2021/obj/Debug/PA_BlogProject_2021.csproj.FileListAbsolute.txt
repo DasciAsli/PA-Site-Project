@@ -327,3 +327,7 @@ D:\Masaüstü\PA Blog Projesi\PA Blog Proje\PA_BlogProject_2021\obj\Debug\PA_Blo
 D:\Masaüstü\PA Blog Projesi\PA Blog Proje\PA_BlogProject_2021\obj\Debug\PA_BlogProject_2021.csproj.CoreCompileInputs.cache
 D:\Masaüstü\PA Blog Projesi\PA Blog Proje\PA_BlogProject_2021\obj\Debug\PA_BlogProject_2021.dll
 D:\Masaüstü\PA Blog Projesi\PA Blog Proje\PA_BlogProject_2021\obj\Debug\PA_BlogProject_2021.pdb
+D:\Masaüstü\PA Blog Projesi\PA Blog Proje\PA_BlogProject_2021\bin\PagedList.dll
+D:\Masaüstü\PA Blog Projesi\PA Blog Proje\PA_BlogProject_2021\bin\PagedList.Mvc.dll
+D:\Masaüstü\PA Blog Projesi\PA Blog Proje\PA_BlogProject_2021\bin\PagedList.xml
+D:\Masaüstü\PA Blog Projesi\PA Blog Proje\PA_BlogProject_2021\bin\PagedList.Mvc.xml

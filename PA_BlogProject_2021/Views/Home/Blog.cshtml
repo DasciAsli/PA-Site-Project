@@ -1,5 +1,6 @@
 ﻿@model PA_BlogProject_2021.Models.ViewModel.BlogViewModel
-
+@using PagedList;
+@using PagedList.Mvc;
 
 @{
     ViewBag.Title = "Blog";
@@ -17,7 +18,6 @@
 <style>
     #resim {
         width: 50%;
-        
     }
 </style>
 
@@ -39,19 +39,27 @@
             }
         </div>
 
+
+
         <!--Pagination-->
         <div class="row justify-content-center mt-5">
             <div class="col-lg-6 text-center">
                 <nav class="navigation pagination d-inline-block">
-                    <div class="nav-links">
-                        <a class="prev page-numbers" href="#">Prev</a>
-                        <span aria-current="page" class="page-numbers current">1</span>
-                        <a class="page-numbers" href="#">2</a>
-                        <a class="next page-numbers" href="#">Next</a>
+                    <div class="nav-links" style="color:black;">
+                        @Html.PagedListPager((IPagedList)ViewBag.PageList, sayfa => Url.Action("Blog", new { sayfa }), new PagedListRenderOptions
+                          {
+
+                              DisplayLinkToIndividualPages = true,
+                              DisplayPageCountAndCurrentLocation = false,
+                              MaximumPageNumbersToDisplay = 10,
+                              LiElementClasses = new string[] { "page-item" },
+
+                           })
                     </div>
                 </nav>
             </div>
         </div>
+
 
     </div>
 </section>

@@ -9,8 +9,8 @@
                 <div class="col-lg-2 col-md-4">
                     <div class="header-top-socials text-center text-lg-left text-md-left">
 
-                        <a href="https://github.com/themefisher/" target="_blank"><i class="ti-github"></i></a>
-                        <a href="https://github.com/themefisher/" target="_blank"><i class="ti-linkedin"></i></a>
+                        <a href="https://github.com/" target="_blank"><i class="ti-github"></i></a>
+                        <a href="https://linkedin.com/" target="_blank"><i class="ti-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-8 text-center text-lg-right text-md-right">
@@ -55,8 +55,8 @@
                 else
                 {
                     <form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
-                        <a href="@Url.Action("Login","Account")" class="btn btn-solid-border btn-round-full">Giriş Yap</a>
-                        <a href="@Url.Action("Create","Account")" class="btn btn-solid-border btn-round-full">Kayıt Ol</a>
+                        <a href="@Url.Action("Login","Account",new { area="ManagementPanel"})" class="btn btn-solid-border btn-round-full">Giriş Yap</a>
+                        <a href="@Url.Action("Create","Account",new { area="ManagementPanel"})" class="btn btn-solid-border btn-round-full">Kayıt Ol</a>
                     </form>
 
                 }

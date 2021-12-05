@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace PA_BlogProject_2021.Areas.ManagementPanel.Controllers
 {
+    
     public class AccountController : Controller
     {
         BlogProjeContext db = new BlogProjeContext();
@@ -63,14 +64,15 @@ namespace PA_BlogProject_2021.Areas.ManagementPanel.Controllers
             }
             if (user.RolId == 1)
             {
-
+                Session["RolId"] = user.RolId;
                 Session["KullanıcıAdı"] = user.UserName; //Session benim verdiğim değeri taşıyan bir key ve ben bu anahtara bir isim veriyorum bu isime de bir değer atıyorum 
                 return RedirectToAction("Index", "Blogs", new { area = "ManagementPanel" });//ManagementPanel içindeki Blog controllera gitmen gerekiyor.
             }
             else
             {
+                Session["RolId"] = user.RolId;
                 Session["KullanıcıAdı"] = user.UserName; //Session benim verdiğim değeri taşıyan bir key ve ben bu anahtara bir isim veriyorum bu isime de bir değer atıyorum 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home",new { area = "" });
             }
 
         }

@@ -20,12 +20,28 @@ namespace PA_BlogProject_2021
 
             if (HttpContext.Current.Session["KullanıcıAdı"] == null)
             {
-                filterContext.Result = new RedirectToRouteResult(new System.Web.Routing.RouteValueDictionary()
-                {
-                   {"Action","Login" },
-                   {"Controller","Account"}
 
-                });
+                filterContext.Result = new RedirectToRouteResult(new System.Web.Routing.RouteValueDictionary()
+                    {
+                        {"Action","Login"},
+                        {"Controller","Account"}
+
+                    });
+
+            }
+            else
+            {
+                if (HttpContext.Current.Session["RolId"].ToString() != "1")
+                {
+
+                    filterContext.Result = new RedirectToRouteResult(new System.Web.Routing.RouteValueDictionary()
+                    {
+                        {"Action","Login"},
+                        {"Controller","Account"}
+
+                    });
+
+                }
 
             }
 
